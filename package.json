@@ -1,0 +1,25 @@
+{
+  "name": "api_rest_node",
+  "version": "1.0.0",
+  "description": "Api rest creud y login node.js",
+  "main": "app.ts",
+  "scripts": {
+    "test": "test",
+    "tsc": "tsc --watch",
+    "start:dev:local": "nodemon ./dist/app.js"
+  },
+  "keywords": [
+    "Api",
+    "rest"
+  ],
+  "author": "Jorge Enrique Renteria Mosquera",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3"
+  }
+}

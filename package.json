@@ -1,26 +1,32 @@
 {
   "name": "api_rest_node",
   "version": "1.0.0",
-  "description": "Api rest creud y login node.js",
-  "main": "app.ts",
+  "description": "API REST con Node.js, Express, TypeScript y MongoDB para gestionar clientes y productos.",
+  "main": "dist/app.js",
   "scripts": {
-    "test": "test",
-    "tsc": "tsc --watch",
-    "start:dev:local": "nodemon ./dist/app.js"
+    "build": "tsc",
+    "check": "tsc --noEmit",
+    "dev": "tsc --watch",
+    "start": "node ./dist/app.js"
   },
   "keywords": [
-    "Api",
-    "rest"
+    "api",
+    "rest",
+    "node",
+    "typescript",
+    "mongodb",
+    "express"
   ],
   "author": "Jorge Enrique Renteria Mosquera",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
-    "mongoose": "^8.16.0",
-    "nodemon": "^3.1.10"
+    "mongoose": "^8.16.0"
   },
   "devDependencies": {
-    "@types/express": "^5.0.3"
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.3.0",
+    "typescript": "^5.9.2"
   }
 }

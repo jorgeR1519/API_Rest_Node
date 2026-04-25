@@ -1,16 +1,19 @@
-import { connect } from "mongoose"
+import mongoose from "mongoose";
 
-const db_conecction =async () => {
+const dbConnection = async (): Promise<void> => {
+  const databaseUrl = process.env.URL_DATABASE || process.env.URl_DATABASE;
 
-    try {
-        
-        await connect (process.env.URl_DATABASE || '' )
-    } catch (error) {
-        console.error(error)
-        throw new Error('Error al conectar a la base de datos')
-        
-    }
+  if (!databaseUrl) {
+    throw new Error("Database URL is not configured");
+  }
 
- }
+  try {
+    await mongoose.connect(databaseUrl);
+    console.log("Database connected successfully");
+  } catch (error) {
+    console.error("Database connection failed", error);
+    throw new Error("Error al conectar a la base de datos");
+  }
+};
 
-export default db_conecction;
+export default dbConnection;
